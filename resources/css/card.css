@@ -1,0 +1,8 @@
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+  
+}
+.hero .info .btn-get-started:hover {
+    background: yellow;
+}
