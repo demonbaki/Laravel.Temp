@@ -9,15 +9,34 @@
           <li class="nav-item">
             <a class="nav-link active text-danger" aria-current="page" href="{{route('welcome')}}">Home</a>
           </li>
+          @guest
+              
+          <li class="nav-item">
+            <a class="nav-link text-danger" href="{{route('article.create')}}">Crea articolo</a>
+          </li>
+         
           <li class="nav-item">
             <a class="nav-link text-danger" href="{{route('form')}}">Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="">Team</a>
+            <a class="nav-link text-danger" href="{{route('register')}}">register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="">Product</a>
+            <a class="nav-link text-danger" href="{{route('login')}}">login</a>
           </li>
+          @else
+          {{-- @if (Auth::user()) --}}
+          <li class="nav-item">
+            <p class="nav-link text-white">Benvenuto {{Auth::user()->name}}</p>
+          </li>
+          {{-- @endif --}}
+          <li class="nav-item">
+            <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"></a>
+          </li>
+          <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
+            @csrf
+          </form>
+          @endguest
         </ul>
       </div>
     </div>
