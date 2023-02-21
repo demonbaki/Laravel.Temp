@@ -10,8 +10,14 @@ class ArticleController extends Controller
         return view('article.create');
     }
     public function store(Request $request){
-        $article = Artcile::create([
-            'name' => $request->input('name');
-        )];
+        $article = Artcile::create(
+        [
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+        ]
+            
+        );
+
+        return redirect()->route('welcome');
     }
 }

@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Mail;
 class PublicController extends Controller
 {
     public function welcome(){
+        $articles = Article::all()->sortDesc();
+        return view('welcome', compact('articles'));
+
         return view('welcome');
     }
     public function Form(){
@@ -26,6 +29,8 @@ class PublicController extends Controller
        
         return redirect(route('welcome'))->with('message', 'la tua email è stata inviata con successo');
     }
+
+
    
 
 }
