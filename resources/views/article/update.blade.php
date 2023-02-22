@@ -2,18 +2,16 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
-                <h1>Crea Card</h1>
+                <h1>Modifica</h1>
             </div>
         </div>
-    </div>
-    
-    
-    
+    </div> 
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-6 col-12">                                   
-                <form method="POST" action="{{route('article.store')}}">
+                <form method="POST" action="{{route('article.edit', compact('article'))}}">
                     @csrf
+                    @method('put')
                     <div class="mb-3">
                       <label  class="form-label">Nome e Cognome</label>
                       <input placeholder="Inserisci il tuo nome e cognome" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{old('name')}}">

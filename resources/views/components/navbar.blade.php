@@ -9,20 +9,18 @@
           <li class="nav-item">
             <a class="nav-link active text-danger" aria-current="page" href="{{route('welcome')}}">Home</a>
           </li>
-          @guest
-              
           <li class="nav-item">
-            <a class="nav-link text-danger" href="{{route('article.create')}}">Crea articolo</a>
+            <a class="nav-link text-danger" href="{{route('article.create')}}">Crea Articolo</a>
           </li>
-         
+          @guest   
           <li class="nav-item">
-            <a class="nav-link text-danger" href="{{route('form')}}">Service</a>
+            <a class="nav-link text-danger" href="{{route('form')}}">Domandaci</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="{{route('register')}}">register</a>
+            <a class="nav-link text-danger" href="{{route('register')}}">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-danger" href="{{route('login')}}">login</a>
+            <a class="nav-link text-danger" href="{{route('login')}}">Login</a>
           </li>
           @else
           {{-- @if (Auth::user()) --}}
@@ -31,7 +29,7 @@
           </li>
           {{-- @endif --}}
           <li class="nav-item">
-            <a href="{{route('logout')}}" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"></a>
+            <a href="{{route('logout')}}" class="nav-link text-white" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
           </li>
           <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
             @csrf

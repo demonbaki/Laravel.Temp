@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Article;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\ArticleController;
+
 
 
 class PublicController extends Controller
@@ -14,7 +17,7 @@ class PublicController extends Controller
         $articles = Article::all()->sortDesc();
         return view('welcome', compact('articles'));
 
-        return view('welcome');
+        
     }
     public function Form(){
         return view('form');

@@ -28,7 +28,20 @@
         <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem
           dolore earum</p>
       </div>
-      
+      <div class="container">
+        <div class="row justify-content-center">
+        
+          @foreach ($articles as $article)
+          <div class="col-12 col-lg-6">
+            <x-card-article
+            :article="$article"
+            />
+          </div>
+       
+              
+          @endforeach
+        </div>
+      </div>
 
       <div class="row gy-4">
 

@@ -21,3 +21,7 @@ Route::get('Cant',[PublicController::class,'Cant']) -> name ('Cant');
 Route::post('form/iscriviti',[PublicController::class,'iscriviti']) -> name ('form.iscriviti');
 Route::get('/article/create',[ArticleController::class,'create']) -> name ('article.create');
 Route::post('/article/store',[ArticleController::class,'store']) -> name ('article.store');
+Route::get('/article/detail/{article}',[ArticleController::class,'detail']) -> name ('article.detail');
+Route::get('/article/update/{article}',[ArticleController::class,'update']) -> name ('article.update');
+Route::put('/article/edit/{article}',[ArticleController::class,'edit']) -> name ('article.edit');
+Route::delete('/article/delete/{article}',[ArticleController::class,'delete']) -> name ('article.delete');
