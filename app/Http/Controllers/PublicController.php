@@ -33,6 +33,11 @@ class PublicController extends Controller
         return redirect(route('welcome'))->with('message', 'la tua email è stata inviata con successo');
     }
 
+    public function show(){
+        $products = Product::all();
+        return view('product.showproducts', compact('products'));
+    }
+
 
    
 

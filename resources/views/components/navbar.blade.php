@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="{{route('welcome')}}">UpCostruction</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon bg-danger"></span>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -23,6 +23,16 @@
             <a class="nav-link text-danger" href="{{route('login')}}">Login</a>
           </li>
           @else
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle  text-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Prodotti
+            </a>
+            <ul class="dropdown-menu text-danger">
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item " href="{{route('product.create')}}">Crea un prodotto</a></li>
+            </ul>
+          </li>
+        </ul>
           {{-- @if (Auth::user()) --}}
           <li class="nav-item">
             <p class="nav-link text-white">Benvenuto {{Auth::user()->name}}</p>

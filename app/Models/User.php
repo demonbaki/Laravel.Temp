@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function products(){// funzione relazionale
+        // ci ritorneranno i prodotti dell'utente che li ha inseriti
+       return $this->hasMany(Product::class);
+    }
 }
