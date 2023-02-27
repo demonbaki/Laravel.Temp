@@ -58,7 +58,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('product/show-product', compact('product'));
+        return view('product/show', compact('product'));
     }
 
     public function getProductByUser(User $user){

@@ -8,10 +8,11 @@ use App\Http\Controllers\Controller;
 
 class ArticleController extends Controller
 
-{  public function __construct()
-    {
-        $this->middleware('auth');
-    }
+{  
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
 
     public function create(){
@@ -22,6 +23,7 @@ class ArticleController extends Controller
         [
             'name' => $request->input('name'),
             'email' => $request->input('email'),
+            'img'=> $request->has('img') ? $request->file('img')->store('public/articles') : '/img/default.jpg',  
         ]
             
         );
