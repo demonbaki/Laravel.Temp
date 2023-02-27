@@ -15,6 +15,7 @@
           <h5 class="card-title">{{$product->name}}</h5>
           <p class="card-text">{{$product->description}}</p>
           <p class="card-text">{{$product->price}}</p>
+          <p class="card-text"> Categoria :{{$product->category->name}}</p>
           <p class="card-text">Inserito da Te:<a href="{{route('user.product', $product->user->id)}}">{{$product->user->name}}</a></p>
           <a href="{{route('product.show', $product)}}" class="btn btn-primary">Dettaglio Prodotto</a>
        

@@ -29,10 +29,11 @@
             </a>
             <ul class="dropdown-menu text-danger">
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item " href="{{route('product.create')}}">Crea un prodotto</a></li>
+              <li><a class="dropdown-item " href="{{route('product.create')}}">Crea un Prodotto</a></li>
+              <li><a class="dropdown-item " href="{{route('product.index')}}">I miei Prodotti</a></li>
             </ul>
           </li>
-        </ul>
+       
           {{-- @if (Auth::user()) --}}
           <li class="nav-item">
             <p class="nav-link text-white">Benvenuto {{Auth::user()->name}}</p>
@@ -41,6 +42,20 @@
           <li class="nav-item">
             <a href="{{route('logout')}}" class="nav-link text-white" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle  text-danger" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul class="dropdown-menu text-danger">
+              <li><hr class="dropdown-divider"></li>
+          @foreach ($categories as $category)
+          <li><a class="dropdown-item " href="{{route('product.category' , $category)}}">{{$category->name}}</a></li>
+         
+          @endforeach
+              
+            </ul>
+          </li>
+        </ul>
           <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
             @csrf
           </form>

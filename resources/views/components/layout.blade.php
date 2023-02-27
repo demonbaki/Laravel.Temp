@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/css/main.css" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
     <title>Document</title>
 </head>
 <body>
@@ -16,6 +17,6 @@
       {{$slot}}
       <x-footer
       />
-
+    @livewireScripts
 </body>
 </html>

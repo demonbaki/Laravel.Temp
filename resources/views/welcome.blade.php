@@ -7,6 +7,14 @@
 </div>
     
 @endif
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 text-center">
+
+      <livewire:counter/>
+    </div>
+  </div>
+</div>
 <div class="info d-flex align-items-center">
     <div class="container">
       <div class="row justify-content-center">
@@ -42,7 +50,7 @@
           @endforeach
         </div>
       </div>
-
+      
       <div class="row gy-4">
 
         <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">

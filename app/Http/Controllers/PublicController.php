@@ -25,6 +25,8 @@ class PublicController extends Controller
     public function iscriviti(Request $request){
         $name = $request->name;
         $email = $request->email;
+        $img = $request->img;
+        
 
         $user = compact('name','email');
         Mail::to($email)->send(new ContactMail($user));
