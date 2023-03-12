@@ -12,7 +12,7 @@
         <p>{{session('message')}}</p>
     </div>        
 @endif
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row justify-content-center">
             <div class="col-md-6 col-12">                                   
                 <form method="POST" action="{{route('product.store')}}" enctype="multipart/form-data">
@@ -49,7 +49,7 @@
                         <label class="form-label">Inserisci l'immagine dell'articolo</label>
                         <input type="file" class="form-control" name="img" >
                     </div>
-                    <button type="submit" class="btn btn-primary">Pubblica il prodotto</button>
+                    <button type="submit" class="btn btn-secondary">Pubblica il prodotto</button>
                 </form>
             </div>
         </div>

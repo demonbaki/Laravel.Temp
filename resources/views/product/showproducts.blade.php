@@ -11,7 +11,7 @@
         <div class="row justify-content-center ">  
             @foreach ($products as $product)
             <div class="col-md-6 col-12 animate__fadeInLeft">
-                <x-product-card
+                <x-products-card
                 :product="$product"
                 />
             </div>

@@ -7,23 +7,28 @@
 </div>
     
 @endif
-<div class="container">
+{{-- <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-6 text-center">
 
       <livewire:counter/>
     </div>
   </div>
-</div>
+</div> --}}
 <div class="info d-flex align-items-center">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-12 col-md-6 text-center videohome">
+          <div class="vdeo">
+            {{-- <video src="img/tempesta.mp4" type="video/mp4" class="videohome" controls autoplay muted poster="img/tempesta.mp4"></video> --}}
+
+
+          </div>
           <h2 data-aos="fade-down" class="aos-init aos-animate">Welcome to <span>UpConstruction</span></h2>
           <p data-aos="fade-up" class="aos-init aos-animate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a data-aos="fade-up" data-aos-delay="200" href="{{route('form')}}" class="btn btn-danger">Get Started</a>
+          <a data-aos="fade-up" data-aos-delay="200" href="{{route('register')}}" class="btn btn-dark">Get Started</a>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
     
     
     
-    <div class="container-fluid">
+    <div class="container-fluid login-box ">
         <div class="row justify-content-center">
             <div class="col-md-6 col-12">                                   
                 <form method="POST" action="{{route('article.store')}}" enctype="multipart/form-data">
@@ -25,9 +25,9 @@
                     <div class="mb-3">
                       <label  class="form-label">Email</label>
                       <input placeholder="Inserisci la tua mail" type="email" class="form-control @error('email') is-invalid @enderror"  value="{{old('email')}}" name="email">
-                      <input type="file" class="form-control" name="img">
+                      <input type="file" class="form-control mt-5" name="img">
                     </div>
-                   <button type="submit" class="btn btn-primary">Pubblica l'articolo</button>
+                   <button type="submit" class="btn btn-secondary">Pubblica l'articolo</button>
                 </form>
             </div>
         </div>
